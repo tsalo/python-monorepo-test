@@ -1,23 +1,21 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
-[project]
+[tool.poetry]
 name = "monorepo_core"
 version = "0.0.1"
 description = "The core package for monorepo."
-license = {file = "../LICENSE"}
-requires-python = ">=3.8"
-dependencies = [
-    "argparse",
-    "numpy",
-]
+license = "MIT"
+authors = ["Your Name <your.email@example.com>"]
 
-[project.scripts]
+[tool.poetry.dependencies]
+python = "^3.8"
+argparse = "*"
+numpy = "*"
+
+[tool.poetry.scripts]
 monorepocore = "monorepo_core.cli:main"
 
-[tool.hatch.build.targets.sdist.force-include]
-"../src/monorepo/core" = "src/monorepo/core"
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/monorepo"]
+[[tool.poetry.packages]]
+include = "../src/monorepo/core/**/*"
