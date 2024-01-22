@@ -10,11 +10,14 @@ license = {file = "../LICENSE"}
 requires-python = ">=3.8"
 dependencies = [
     "argparse",
-    "../monorepo-core",
+    "monorepo_core @ {root:uri}/../monorepo-core",
 ]
 
 [project.scripts]
 monorepo = "monorepo.cli:main"
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.hatch.build.targets.sdist.force-include]
 "../src/monorepo/monorepo" = "src/monorepo/monorepo"
