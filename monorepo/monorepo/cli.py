@@ -1,4 +1,5 @@
 """Command-line interface for the monorepo package."""
+
 import argparse
 
 from monorepo.workflows import run_workflow
