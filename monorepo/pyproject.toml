@@ -18,4 +18,4 @@ monorepo-core = { path = "../monorepo-core/" }
 monorepo = "monorepo.cli:main"
 
 [[tool.poetry.packages]]
-include = "../src/monorepo/monorepo/**/*"
+include = "monorepo"

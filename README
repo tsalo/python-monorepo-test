@@ -1,3 +1,11 @@
 # python-monorepo-test
 
 An attempted Python monorepo with interdependent packages.
+
+## monorepo_core
+
+The core package, containing only the key elements of the package.
+
+# monorepo
+
+The expanded package, which uses monorepo_core as a dependency.
