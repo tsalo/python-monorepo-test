@@ -16,10 +16,8 @@ def _get_parser():
     parser.add_argument(
         dest="data",
         nargs="+",
-        metavar="FILE",
         type=float,
         help="Space-separated list of floats to process",
-        required=True,
     )
 
     return parser
@@ -29,7 +27,8 @@ def main(argv=None):
     """Run the workflow."""
     options = _get_parser().parse_args(argv)
     kwargs = vars(options)
-    run_workflow(**kwargs)
+    sos = run_workflow(**kwargs)
+    print(f"The sum of squares is: {sos}")
 
 
 if __name__ == "__main__":

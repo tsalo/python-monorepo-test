@@ -4,6 +4,6 @@ from monorepo_core.utils import sum_of_squares
 from monorepo.utils import format_number
 
 
-def run_workflow(x):
+def run_workflow(data):
     """Run the monorepo workflow."""
-    return format_number(sum_of_squares(x))
+    return format_number(sum_of_squares(data))

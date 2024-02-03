@@ -2,6 +2,12 @@
 
 An attempted Python monorepo with interdependent packages.
 
+In order to have both packages installed in editable mode,
+you need to do `pip install -e .` for `monorepo` first, and _then_ do it for `monorepo-core`.
+Installing `monorepo` will install `monorepo` in editable mode,
+but `monorepo-core` will be installed in regular mode,
+so you need to reinstall it in editable mode.
+
 ## monorepo_core
 
 The core package, containing only the key elements of the package.
